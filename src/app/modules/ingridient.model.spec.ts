@@ -1,7 +1,7 @@
-import { ingredient } from './ingredient.model';
+import { Ingredient } from './ingredient.model';
 
 describe('Ingridient', () => {
   it('should create an instance', () => {
-    expect(new ingredient()).toBeTruthy();
+    expect(new Ingredient()).toBeTruthy();
   });
 });

@@ -1,2 +1,2 @@
-export class ingredient {
+export class Ingredient {
 }
