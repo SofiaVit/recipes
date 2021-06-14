@@ -7,7 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() shoppingListClicked = new EventEmitter<Boolean>();
+  @Output() tabSelected = new EventEmitter<string>();
 
   collapsed = true;
 
@@ -16,11 +16,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickRecipes() {
-    this.shoppingListClicked.emit(false);
-  }
-
-  onClickShoppingList() {
-    this.shoppingListClicked.emit(true);
+  onSelect(tabType: string) {
+    this.tabSelected.emit(tabType);
   }
 }

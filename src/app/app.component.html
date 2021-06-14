@@ -1,9 +1,9 @@
-<app-header (shoppingListClicked)="isShoppingListClicked($event)"></app-header>
+<app-header (tabSelected)= "tabSelected = $event"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="!shoppingListClicked"></app-recipes>
-      <app-shopping-list *ngIf="shoppingListClicked"></app-shopping-list>
+      <app-recipes *ngIf="tabSelected === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="tabSelected !== 'recipe'"></app-shopping-list>
     </div>
   </div>
 </div>

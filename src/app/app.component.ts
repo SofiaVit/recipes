@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipes';
-  shoppingListClicked : Boolean= false;
+  tabSelected = 'recipe';
 
-  isShoppingListClicked(shoppingListClicked: Boolean) {
-    this.shoppingListClicked = shoppingListClicked;
+  onNavigate(tabSelected: string) {
+    this.tabSelected = tabSelected;
   }
 }
